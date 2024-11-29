@@ -1,0 +1,24 @@
+name: Node.js Frontend and Backend Build
+description: |
+  This action installs Node.js dependencies, builds the frontend, and runs tests for both frontend and backend.
+author: melvinsamuel070
+
+inputs:
+  frontend_directory:
+    description: 'The directory for the frontend project'
+    required: true
+    default: './frontend'
+  backend_directory:
+    description: 'The directory for the backend project'
+    required: true
+    default: './backend'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run npm.sh 
+      shell: bash
+      run: |
+        chmod +x ./npm.sh
+        ./npm.sh ${{ inputs.frontend_directory }} ${{ inputs.backend_directory }}
+
