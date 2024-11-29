@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Update system and install dependencies
+set -e
+
 echo "Updating package list and installing required dependencies..."
 apt-get update && apt-get install -y nodejs npm build-essential git
 
