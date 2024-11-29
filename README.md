@@ -72,7 +72,7 @@ If you want to modify or test this action locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/melvinsamuel070/nodejs-frontend-backend-build.git
+   git clone https://github.com/melvinsamuel070/npm-action.git 
    ```
 2. Make `npm.sh` executable:
    ```bash
